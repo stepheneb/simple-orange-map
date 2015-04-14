@@ -1,0 +1,63 @@
+var mapdata,
+    locations;
+
+mapdata = {
+  "src": "images/orange-889x1120.png",
+  "width": 889,
+  "height": 1120,
+  "registration": {
+    "topleft": {
+			"googlemap": "https://www.google.com/maps/place/40%C2%B047'17.6%22N+74%C2%B015'22.4%22W/@40.78822,-74.256229,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0",
+      "address": "511 Prospect Ave West Orange, NJ 07052, USA",
+      "longitude": -74.256229,
+      "latitude": 40.788220,
+      "x_pixel": 36,
+      "y_pixel": 67
+    },
+    "topright": {
+			"googlemap": "https://www.google.com/maps/place/40%C2%B047'14.9%22N+74%C2%B013'04.5%22W/@40.787468,-74.217927,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0",
+      "address": "631-633 Thomas Blvd East Orange, NJ 07017, USA",
+      "longitude": -74.217927,
+      "latitude": 40.787468,
+      "x_pixel": 855,
+      "y_pixel": 88
+    },
+    "bottomleft": {
+			"googlemap": "https://www.google.com/maps/place/40%C2%B045'24.0%22N+74%C2%B015'16.5%22W/@40.756667,-74.254588,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0",
+      "address": "98 W Montrose Ave South Orange, NJ 07079, USA",
+      "longitude": -74.254571,
+      "latitude": 40.756654,
+      "x_pixel": 71,
+      "y_pixel": 960
+    },
+    "bottomright": {
+			"googlemap": "https://www.google.com/maps/place/40%C2%B045'13.0%22N+74%C2%B013'09.1%22W/@40.75362,-74.219187,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0",
+      "address": "157 Shepard Ave East Orange, NJ 07018, USA",
+      "longitude": -74.219187,
+      "latitude": 40.753620,
+      "x_pixel": 831,
+      "y_pixel": 1045
+    }
+  }
+};
+
+locationAndContentData = {
+  "locations": [
+    {
+      "address": "451 Lincoln Ave",
+      "latitude": 40.763261,
+      "longitude": -74.243237,
+			"contentItems": [
+				0
+			]
+    }
+  ],
+  "contentItems": [
+    {
+      "index": 0,
+			"title": "Oakwood Bridge Club",
+      "video": "videos/284078146.mp4",
+      "location": 0
+    }
+  ]
+};

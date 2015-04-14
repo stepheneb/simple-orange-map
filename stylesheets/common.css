@@ -1,0 +1,96 @@
+html {
+  margin: 0em;
+  padding: 0em;
+  background-color: white;
+}
+
+body {
+  height: 100%;
+  font-size: 1em;
+  font-family: 'Lato';
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+}
+
+div#content-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background-color: black;
+  top:0;
+  left: 0;
+}
+
+h1 {
+  color: #333;
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 1.4em;
+}
+h2 {
+  color: #555;
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 1.15em;
+  margin-top: 0;
+}
+
+h3 {
+  color: #777;
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  margin: 0px;
+  padding: 0.25em 0.5em 0.3em 0.5em;
+  font-size: 0.95em;
+  font-weight: 600;
+  border-radius: 0.8em;
+  box-shadow: 2px 1px 1px #999;
+  background: -o-linear-gradient(top, #eee 0%, #bbb 100%);
+  background: -moz-linear-gradient(top, #eee 0%, #bbb 100%);
+  background: -webkit-linear-gradient(top, #eee 0%, #bbb 100%);
+  background: -ms-linear-gradient(top, #eee 0%, #bbb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#bbb));
+  background: linear-gradient(top, #eee 0%, #bbb 100%);
+}
+
+button:hover {
+  background: -o-linear-gradient(top, #fff 0%, #ccc 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #ccc 100%);
+  background: -webkit-linear-gradient(top, #fff 0%, #ccc 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #ccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+  background: linear-gradient(top, #fff 0%, #ccc 100%);
+}
+
+p {
+  margin: 1.0em 1.0em;
+  font-size: 0.95em;
+}
+ul {
+  list-style-type: none;
+  margin: 1em 0em 1em 0em;
+  padding: 0em 0em 0em 0em;
+}
+
+ul li {
+  margin: 0.3em 0.2em 0.3em 1.2em;
+  padding: 0em 0em 0em 0em;
+}
+
+code {
+  font-size: 90%;
+}
+
