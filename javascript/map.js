@@ -131,8 +131,8 @@ function handleResize() {
   }
 }
 
-function findClosestLocation(clickPos) {
-  var minDistance = contentMaxDist/10,
+function findClickedOnLocation(clickPos) {
+  var minDistance = circleRadius,
       x = clickPos[0],
       y = clickPos[1],
       index = -1,
@@ -248,7 +248,7 @@ function finishStartup() {
 
   svg.on("mousedown", function (e) {
     var clickPos = d3.mouse(this),
-        newLoc = findClosestLocation(clickPos),
+        newLoc = findClickedOnLocation(clickPos),
         newContentItem,
         eventType,
         i;
