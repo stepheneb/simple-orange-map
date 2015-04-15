@@ -50,14 +50,50 @@ locationAndContentData = {
 			"contentItems": [
 				0
 			]
+    },
+    {
+      "address": "451 Lincoln Ave",
+      "latitude": 40.763261,
+      "longitude": -74.243237,
+			"contentItems": [
+				0
+			]
+    },
+    {
+      "address": "400 Lincoln Ave",
+      "latitude": 40.765656,
+      "longitude": -74.239035,
+			"contentItems": [
+				1
+			]
+    },
+    {
+      "address": "475 South Jefferson Street",
+      "latitude": 40.764822,
+      "longitude": -74.246701,
+			"contentItems": [
+				2
+			]
     }
   ],
   "contentItems": [
     {
       "index": 0,
 			"title": "Oakwood Bridge Club",
-      "video": "videos/284078146.mp4",
+      "video": "media/video/480x270/Hidden_Treasures_of_Our_Orange_Oakwood_Bridge_Cl.mp4",
       "location": 0
+    },
+    {
+      "index": 1,
+			"title": "Orange High School Vs Barringer High School",
+      "video": "media/video/480x270/Orange_High_School_Vs_Barringer_High_School.mp4",
+      "location": 1
+    },
+    {
+      "index": 2,
+			"title": "Hidden Treasures of Orange, Hat City and No Name Factory",
+      "video": "media/video/480x270/Hidden_Treasures_of_Our_Orange_Hat_City_No_Name.mp4",
+      "location": 2
     }
   ]
 };

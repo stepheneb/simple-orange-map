@@ -7,7 +7,7 @@ var map,
     circle,
     label,
     tooltip,
-		selected = null;
+    selected = null;
 
 function pulseSelectedLocationCircle() {
   setInterval(function(){
@@ -132,10 +132,10 @@ function handleResize() {
 }
 
 function findClosestLocation(clickPos) {
-  var minDistance = contentMaxDist,
+  var minDistance = contentMaxDist/10,
       x = clickPos[0],
       y = clickPos[1],
-      index = 0,
+      index = -1,
       d;
   for (i = 0; i < contentItemLocations.length; i++) {
     dx = contentItemLocations[i].x - x;
@@ -146,7 +146,11 @@ function findClosestLocation(clickPos) {
       index = i;
     }
   }
-  return contentItemLocations[index];
+  if (index == -1) {
+    return null;
+  } else {
+    return contentItemLocations[index];
+  }
 }
 
 function updateContentItem(eventType, eventData) {
@@ -222,7 +226,7 @@ function finishStartup() {
           .attr("data-address", function(loc) { return loc.address; })
           .attr("r", circleRadius)
           .style("stroke-width", circleStrokeWidth)
-					.style("opacity", 0.7)
+          .style("opacity", 0.7)
           .style("z-index", 2)
           .on("mouseover", function(loc) {
           })
@@ -238,9 +242,9 @@ function finishStartup() {
         .style("text-anchor","middle");
 
   renderLocationCircles();
-	pulseSelectedLocationCircle();
+  pulseSelectedLocationCircle();
 
-	videoInitialization();
+  videoInitialization();
 
   svg.on("mousedown", function (e) {
     var clickPos = d3.mouse(this),
@@ -252,14 +256,15 @@ function finishStartup() {
     hideTooltip();
     console.log("map: mousedown: " + clickPos);
 
-    selected = {};
-    newContentItem = contentItemForLocation(newLoc);
-    selected.contentItem = newContentItem;
-    selected.location = newLoc;
-		stopVideo(mainVideo);
-		hideVideo(mainVideo);
-		playContentItem();
-		playVideo();
+    stopVideo(mainVideo);
+    hideVideo(mainVideo);
+    if (newLoc) {
+      selected = {};
+      newContentItem = contentItemForLocation(newLoc);
+      selected.contentItem = newContentItem;
+      selected.location = newLoc;
+      playVideo();
+    }
 
   });
 
