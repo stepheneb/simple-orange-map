@@ -121,7 +121,7 @@ function setupTransformation() {
   }
 
 function setup() {
-  contentContainer = d3.select('#content-container');
+  contentContainer = d3.select('#map-image');
   contentWidth = contentContainer.node().offsetWidth;
   contentHeight = contentContainer.node().offsetHeight;
   contentMaxDist = Math.sqrt(contentWidth * contentWidth + contentHeight * contentHeight);
