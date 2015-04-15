@@ -73,9 +73,13 @@ function loadVideoContentItem(selection, node) {
   mp4Source = mp4Source1;
 
 
-	mp4Source
-		.attr("src", contentItem.video)
-		.attr("type", 'video/mp4; codecs="avc1.42E01E,mp4a.40.2"');
+  webmSource
+    .attr("src", contentItem.video + ".webm" )
+    .attr("type", 'video/webm;');
+
+  mp4Source
+    .attr("src", contentItem.video + ".mp4" )
+    .attr("type", 'video/mp4; codecs="avc1.42E01E,mp4a.40.2"');
 
   loadVideo(node);
 }
@@ -121,8 +125,8 @@ function setupVideoTimeListener(node) {
 }
 
 function videoEnded() {
-	stopVideo(mainVideo);
-	hideVideo(mainVideo);
+  stopVideo(mainVideo);
+  hideVideo(mainVideo);
 }
 
 function showVideo(vid) {
@@ -191,5 +195,5 @@ function videoInitialization() {
 function playVideo() {
   stopVideo(mainVideo);
   showVideo(mainVideo);
-	playContentItem();
+  playContentItem();
 };
