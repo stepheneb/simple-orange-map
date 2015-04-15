@@ -118,8 +118,8 @@ function hideTooltip() {
 }
 
 function resizeSVG() {
-  svg.attr("width",  contentWidth)
-     .attr("height", contentHeight);
+  svg.attr("width",  imageWidth)
+     .attr("height", imageHeight);
 }
 
 function handleResize() {

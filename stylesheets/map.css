@@ -10,7 +10,8 @@ html, body {
 }
 
 div#content-container {
-  position: relative;
+  display: block;
+  position: inherit;
   top:0px;
   left: 0px;
   height: 100%;

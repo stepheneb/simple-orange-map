@@ -25,6 +25,9 @@ var contentContainer,
     contentHeight,
     contentMaxDist,
 
+    imageWidth,
+    imageHeight,
+
     circleRadius,
     circleStrokeWidth,
 
@@ -43,10 +46,10 @@ var contentContainer,
     fontSizeInPixels,
 
     contentItems,
-		contentItemLocations,
+    contentItemLocations,
     contentItemLocation,
 
-		currentItem,
+    currentItem,
 
     selected,
 
@@ -67,7 +70,7 @@ function flattenArray(a) {
 // initialization and setup functions
 
 function resizeDocumentFont() {
-  fontSizeInPixels = contentWidth/960 * 12;
+  fontSizeInPixels = imageWidth/960 * 12;
   document.body.style.fontSize = fontSizeInPixels + 'px';
 }
 
@@ -106,8 +109,8 @@ function setupTransformation() {
       originalMapWidth = mapdata.width;
       originalMapHeight = mapdata.height;
 
-  mapScaleFactorX = contentWidth/originalMapWidth;
-  mapScaleFactorY = contentHeight/originalMapHeight;
+  mapScaleFactorX = imageWidth/originalMapWidth;
+  mapScaleFactorY = imageHeight/originalMapHeight;
 
   scaledTransformationMatrix4 = transform2d(
     topleft.longitude, topleft.latitude,
@@ -121,12 +124,16 @@ function setupTransformation() {
   }
 
 function setup() {
-  contentContainer = d3.select('#map-image');
+  contentContainer = d3.select('#content-container');
+  imageContainer = d3.select('#map-image');
   contentWidth = contentContainer.node().offsetWidth;
   contentHeight = contentContainer.node().offsetHeight;
   contentMaxDist = Math.sqrt(contentWidth * contentWidth + contentHeight * contentHeight);
 
-  circleRadius = contentWidth/80;
+  imageWidth = imageContainer.node().offsetWidth;
+  imageHeight = imageContainer.node().offsetHeight;
+
+  circleRadius = imageWidth/80;
   circleStrokeWidth = circleRadius/4;
 
   setupTransformation();
