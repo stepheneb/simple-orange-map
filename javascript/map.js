@@ -181,6 +181,7 @@ function setupContentItemForThisLocation(loc) {
 }
 
 function finishStartup() {
+  console.log("finishing startup ...");
   setup();
 
   setupFullScreenSupport();
