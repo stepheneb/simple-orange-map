@@ -187,9 +187,6 @@ function videoInitialization() {
   mainVideo = video1;
   mainVideoNode = video1Node;
 
-  mainVideo.transition()
-     .duration(200)
-     .style("opacity", 1.0);
 };
 
 function playVideo() {
