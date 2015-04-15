@@ -256,7 +256,6 @@ function finishStartup() {
     hideTooltip();
     console.log("map: mousedown: " + clickPos);
 
-    stopVideo(mainVideo);
     hideVideo(mainVideo);
     if (newLoc) {
       selected = {};
