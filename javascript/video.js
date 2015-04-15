@@ -188,8 +188,9 @@ function videoInitialization() {
   mainVideoNode = video1Node;
 
   // catch the iphone video player "Done" button
-  mainVideoNode.addEventListener('webkitendfullscreen', hideVideo, false);
-
+  video1Node.addEventListener('webkitendfullscreen', function() {
+    hideVideo(mainVideo);
+  }, false);
 };
 
 function playVideo() {
