@@ -45,6 +45,8 @@ var contentContainer,
 
     fontSizeInPixels,
 
+    videoMargin = 10,
+
     contentItems,
     contentItemLocations,
     contentItemLocation,
@@ -132,6 +134,8 @@ function setup() {
 
   imageWidth = imageContainer.node().offsetWidth;
   imageHeight = imageContainer.node().offsetHeight;
+
+  contentContainer.style("width", imageWidth+"px");
 
   circleRadius = imageWidth/80;
   circleStrokeWidth = circleRadius/4;

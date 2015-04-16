@@ -125,6 +125,7 @@ function resizeSVG() {
 function handleResize() {
   setup();
   resizeSVG();
+  resizeVideo();
   renderLocationCircles();
   if (selected) {
     resizeTooltip(selected.location);

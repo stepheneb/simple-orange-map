@@ -165,6 +165,10 @@ function playContentItem() {
   showVideo(mainVideo);
 };
 
+function resizeVideo() {
+  video1.style("width", imageWidth-20+"px");
+};
+
 function videoInitialization() {
 
   // video1
@@ -172,7 +176,9 @@ function videoInitialization() {
       .attr("id", "video1")
       .attr("controls", null)
       .attr("preload", "auto")
-      .style("opacity", 0.0);
+      .style("opacity", 0.0)
+      .style("margin-left", videoMargin+"px")
+      .style("width", imageWidth-videoMargin*2+"px");
 
   video1Node = video1.node();
 
