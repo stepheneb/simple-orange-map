@@ -118,6 +118,9 @@ function hideTooltip() {
 }
 
 function resizeSVG() {
+  var offsetLeft = contentContainer.node().offsetLeft;
+  svgContainer.style("left", offsetLeft+"px")
+  .style("width", imageWidth+"px");
   svg.attr("width",  imageWidth)
      .attr("height", imageHeight);
 }
@@ -200,7 +203,7 @@ function finishStartup() {
         }
       });
 
-  svgContainer = d3.select('body').append("div")
+  svgContainer = contentContainer.append("div")
       .attr("id", "svg-container");
 
   svg = svgContainer.append("svg")

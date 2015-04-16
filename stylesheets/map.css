@@ -15,7 +15,7 @@ div#content-container {
   left: 0px;
   height: 100%;
   width: auto;
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
   background-color: #ddd;
 }
