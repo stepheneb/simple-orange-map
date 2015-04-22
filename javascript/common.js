@@ -23,6 +23,7 @@ var testing = false;
 var contentContainer,
     contentWidth,
     contentHeight,
+    contentOffsetLeft,
     contentMaxDist,
 
     imageWidth,
@@ -126,10 +127,12 @@ function setupTransformation() {
   }
 
 function setup() {
+  var cn;
   contentContainer = d3.select('#content-container');
   imageContainer = d3.select('#map-image');
-  contentWidth = contentContainer.node().offsetWidth;
-  contentHeight = contentContainer.node().offsetHeight;
+  cn = contentContainer.node();
+  contentWidth = cn.offsetWidth;
+  contentHeight = cn.offsetHeight;
   contentMaxDist = Math.sqrt(contentWidth * contentWidth + contentHeight * contentHeight);
 
   imageWidth = imageContainer.node().offsetWidth;
@@ -146,6 +149,8 @@ function setup() {
 
   initializeContentItems();
   initializeLocations();
+
+  contentOffsetLeft = cn.offsetLeft;
 }
 
 // relational functions

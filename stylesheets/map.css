@@ -60,12 +60,14 @@ div.tooltip {
   top: 0;
   text-align: left;
   width: auto;
+  max-width: 20em;
   height: auto;
-  padding: 0.2em 0.5em;
-  color: #444;
+  padding: 0;
+  padding: 0.2em 0.3em;
+  color: #222;
   text-shadow: #fff -1px 1px 1px, #fff 1px -1px 1px, rgba(0,0,0,0.3) 10px 15px 25px;
   font-family: 'Lato';
-  font-size: 1.5em;
+  font-size: 2.0em;
   font-weight: 400;
   background: #eee;
   border: 1px;
@@ -73,6 +75,11 @@ div.tooltip {
   border-radius: 1.0em;
   pointer-events: none;
   z-index: 3;
+}
+
+div.tooltip p {
+  margin: 0.1em 0.2em;
+  padding: 0.2em 0.5em;
 }
 
 div.details {

@@ -67,11 +67,11 @@ function resizeTooltip(loc) {
 
   function tooltipPosLeft(width) {
     if (xpos + 8 + width > contentWidth ) {
-      return contentWidth - width;
+      return (contentWidth - width) + contentOffsetLeft;
     } else if (xpos + 8 < 0) {
-      return 0;
+      return contentOffsetLeft;
     } else {
-      return xpos + 8;
+      return (xpos + 8) + contentOffsetLeft;
     }
   }
 
@@ -108,7 +108,7 @@ function showTooltip(loc) {
   tooltip.transition()
      .duration(200)
      .style("opacity", 0.8)
-     .style("background-color", "rgba(255,255,255, 0.7)");
+     .style("background-color", "rgba(255,255,255, 0.8)");
 }
 
 function hideTooltip() {
@@ -119,8 +119,7 @@ function hideTooltip() {
 }
 
 function resizeSVG() {
-  var offsetLeft = contentContainer.node().offsetLeft;
-  svgContainer.style("left", offsetLeft+"px")
+  svgContainer.style("left", contentOffsetLeft+"px")
   .style("width", imageWidth+"px");
   svg.attr("width",  imageWidth)
      .attr("height", imageHeight);
@@ -212,8 +211,7 @@ function finishStartup() {
 
   resizeSVG();
 
-  tooltip = d3.select("body")
-      .append("div")
+  tooltip = contentContainer.append("div")
       .attr("class", "tooltip")
       .style("opacity", 0.7)
       .style("z-index", 3);
