@@ -93,21 +93,22 @@ function resizeTooltip(loc) {
 }
 
 function showTooltip(loc) {
-  var mov = contentItemForLocation(loc),
-      htmlContent = loc.address;
+  var item = contentItemForLocation(loc),
+      htmlContent = "";
 
+  htmlContent = "<p>" + item.title + "</p><p>" + loc.address + "</p>";
   tooltip.html(htmlContent);
   if (testing) {
     tooltip.append("div")
       .attr("class", "details")
-      .html("mov: " + mov.index + " loc: " + loc.index +
+      .html("item: " + item.index + " loc: " + loc.index +
             "<br/> pixel: " + pixelFormatter(loc.x) + ", " + pixelFormatter(loc.y));
   }
   resizeTooltip(loc);
   tooltip.transition()
      .duration(200)
-     .style("opacity", 0.7)
-     .style("background-color", "rgba(255,255,255, 0)");
+     .style("opacity", 0.8)
+     .style("background-color", "rgba(255,255,255, 0.7)");
 }
 
 function hideTooltip() {
@@ -234,8 +235,10 @@ function finishStartup() {
           .style("opacity", 0.7)
           .style("z-index", 2)
           .on("mouseover", function(loc) {
+            showTooltip(loc);
           })
           .on("mouseout", function(loc) {
+            hideTooltip(loc);
           })
           .on("mousedown", function(loc) {
           });

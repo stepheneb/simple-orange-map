@@ -40,7 +40,7 @@ div#touchme {
   text-align: left;
   width: auto;
   height: auto;
-  color: rgba(48,128,144,0.8);
+  color: rgba(48,128,144,0.9);
   padding: 0.0em 0.4em 0.2em 0.5em;
   text-shadow: #fff -1px 1px 1px, #fff 1px -1px 1px, rgba(0,0,0,0.3) 10px 15px 25px;
   background: rgba(240, 240, 240, 0.6);
@@ -64,9 +64,9 @@ div.tooltip {
   padding: 0.2em 0.5em;
   color: #444;
   text-shadow: #fff -1px 1px 1px, #fff 1px -1px 1px, rgba(0,0,0,0.3) 10px 15px 25px;
-  font-family: 'Roboto';
+  font-family: 'Lato';
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 400;
   background: #eee;
   border: 1px;
   border-color: #444;
