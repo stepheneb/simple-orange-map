@@ -2,9 +2,9 @@ var mapdata,
     locations;
 
 mapdata = {
-  "src": "images/orange-889x1120.png",
+  "src": "images/orange-889x1119.png",
   "width": 889,
-  "height": 1120,
+  "height": 1119,
   "registration": {
     "topleft": {
       "googlemap": "https://www.google.com/maps/place/40%C2%B047'17.6%22N+74%C2%B015'22.4%22W/@40.78822,-74.256229,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0",
