@@ -26,8 +26,11 @@ var contentContainer,
     contentOffsetLeft,
     contentMaxDist,
 
+    imageContainer,
     imageWidth,
     imageHeight,
+
+    fadeableContent,
 
     circleRadius,
     circleStrokeWidth,

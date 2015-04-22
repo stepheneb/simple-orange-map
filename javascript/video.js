@@ -95,6 +95,9 @@ function transitionVideoOn() {
        mainVideoAlmostOver = false;
        mainVideo.attr("controls", true );
       });
+  fadeableContent.transition()
+    .duration(200)
+    .style("opacity", 0.4);
 }
 
 
@@ -149,6 +152,9 @@ function hideVideo(vid) {
      .each("end", function() {
        node.pause();
       });
+  fadeableContent.transition()
+    .duration(200)
+    .style("opacity", 1.0);
 }
 
 function stopVideo(vid) {

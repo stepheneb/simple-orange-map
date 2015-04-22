@@ -204,7 +204,8 @@ function finishStartup() {
       });
 
   svgContainer = contentContainer.append("div")
-      .attr("id", "svg-container");
+      .attr("id", "svg-container")
+      .attr("class", "fadeable");
 
   svg = svgContainer.append("svg")
       .attr("class", "map-svg");
@@ -249,6 +250,8 @@ function finishStartup() {
 
   renderLocationCircles();
   pulseSelectedLocationCircle();
+
+  fadeableContent = d3.selectAll(".fadeable");
 
   videoInitialization();
 
