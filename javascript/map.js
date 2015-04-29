@@ -185,9 +185,32 @@ function setupContentItemForThisLocation(loc) {
   return contentItemNum;
 }
 
+function selectCategoryHandler(e) {
+  var select = e.target,
+      options = selectCategory.options,
+      option,
+      categories = [],
+      i;
+
+  if (options.selectedIndex == -1) {
+    options[lastSelectedCategoryIndex].selected = true;
+  } else {
+    lastSelectedCategoryIndex = options.selectedIndex;
+  }
+  for (i = 0; i < options.length; i++) {
+    option = options[i];
+    if(option.selected) {
+      categories.push(option.value);
+    }
+  }
+  console.log(categories);
+};
+
 function finishStartup() {
   console.log("finishing startup ...");
   setup();
+
+  selectCategory.onchange = selectCategoryHandler;
 
   setupFullScreenSupport();
 

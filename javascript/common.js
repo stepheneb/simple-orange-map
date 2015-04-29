@@ -28,6 +28,7 @@ var contentContainer,
 
     selectCategoryMenu,
     selectCategory,
+    lastSelectedCategoryIndex,
 
     imageContainer,
     imageWidth,
@@ -130,7 +131,22 @@ function setupTransformation() {
     topright.x_pixel*mapScaleFactorX, topright.y_pixel*mapScaleFactorY,
     bottomleft.x_pixel*mapScaleFactorX, bottomleft.y_pixel*mapScaleFactorY,
     bottomright.x_pixel*mapScaleFactorX, bottomright.y_pixel*mapScaleFactorY);
+}
+
+function setupCategories(categories) {
+  var options = selectCategory.options,
+      option,
+      i;
+  selectedCategories = categories;
+  for (i = 0; i < options.length; i++) {
+    option = options[i];
+    if(categories.some( function(c) { return c == options[i].value })) {
+      option.selected = true;
+    } else {
+      option.selected = false;
+    }
   }
+}
 
 function setup() {
   var cn;
@@ -148,6 +164,9 @@ function setup() {
 
   selectCategoryMenu = document.getElementById("menu");
   selectCategory = document.getElementById("categoryMenu");
+
+  setupCategories(["learn"]);
+  lastSelectedCategoryIndex = 0;
 
   circleRadius = imageWidth/80;
   circleStrokeWidth = circleRadius/4;
