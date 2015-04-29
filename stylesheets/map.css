@@ -31,6 +31,39 @@ div#content-container img {
   opacity: 1;
 }
 
+form#menu {
+  position: absolute;
+  height: 4em;
+  width: 8em;
+  top: 0.2em;
+  left: 0.1em;
+  border: none;
+  font-family: 'Lato';
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  color: rgba(48,128,144,0.8);
+  opacity: 0.7;
+  z-index: 4;
+}
+
+form#menu fieldset {
+  border: none;
+}
+
+form#menu fieldset select {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+form#menu fieldset select option {
+  border: none;
+  font-family: 'Lato';
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
 
 div#touchme {
   position: relative;

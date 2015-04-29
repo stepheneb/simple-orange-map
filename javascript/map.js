@@ -129,6 +129,7 @@ function handleResize() {
   setup();
   resizeSVG();
   resizeVideo();
+  selectCategoryMenu.style.left = contentOffsetLeft + "px";
   renderLocationCircles();
   if (selected) {
     resizeTooltip(selected.location);

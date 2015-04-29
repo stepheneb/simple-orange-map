@@ -26,6 +26,9 @@ var contentContainer,
     contentOffsetLeft,
     contentMaxDist,
 
+    selectCategoryMenu,
+    selectCategory,
+
     imageContainer,
     imageWidth,
     imageHeight,
@@ -143,6 +146,9 @@ function setup() {
 
   contentContainer.style("width", imageWidth+"px");
 
+  selectCategoryMenu = document.getElementById("menu");
+  selectCategory = document.getElementById("categoryMenu");
+
   circleRadius = imageWidth/80;
   circleStrokeWidth = circleRadius/4;
 
@@ -154,6 +160,7 @@ function setup() {
   initializeLocations();
 
   contentOffsetLeft = cn.offsetLeft;
+  selectCategoryMenu.style.left = contentOffsetLeft + "px";
 }
 
 // relational functions

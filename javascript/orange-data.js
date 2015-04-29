@@ -41,6 +41,25 @@ mapdata = {
   }
 };
 
+narrativeCategories = {
+  "live": {
+    "title": "Live",
+    "description": "Stories about living in Orange."
+  },
+  "learn": {
+    "title": "Learn",
+    "description": "Stories about learning in Orange."
+  },
+  "work": {
+    "title": "Work",
+    "description": "Stories about working in Orange."
+  },
+  "play": {
+    "title": "Play",
+    "description": "Stories about playing in Orange."
+  }
+};
+
 locationAndContentData = {
   "locations": [
     {
@@ -73,18 +92,21 @@ locationAndContentData = {
       "index": 0,
       "title": "Oakwood Bridge Club",
       "video": "media/video/480x270/Hidden_Treasures_of_Our_Orange_Oakwood_Bridge_Cl",
+      "categories": [ "learn" ],
       "location": 0
     },
     {
       "index": 1,
       "title": "Hidden Treasures of Orange, Hat City and No Name Factory",
       "video": "media/video/480x270/Hidden_Treasures_of_Our_Orange_Hat_City_No_Name",
+      "categories": [ "live" ],
       "location": 1
     },
     {
       "index": 2,
       "title": "Highway 280",
       "video": "media/video/480x270/Hidden_Treasures_of_Our_Orange_Highway_280_with",
+      "categories": [ "learn" ],
       "location": 2
     }
   ]
